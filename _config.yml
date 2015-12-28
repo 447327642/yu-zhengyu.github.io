@@ -9,7 +9,7 @@
 title: 郑彧个人博客
 email: zhengyu.cmu@gmail.com
 description: > # 把一些学习上的东西记录下来，方便自己记忆。如果能够影响一两个人，也是功德一件。
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yu-zhengyu.github.io" # the base hostname & protocol for your site
 twitter_username: yuzheng
 github_username:  yu-zheng
