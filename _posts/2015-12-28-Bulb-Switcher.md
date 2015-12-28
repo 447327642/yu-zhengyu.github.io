@@ -12,7 +12,7 @@ There are n bulbs that are initially off. You first turn on all the bulbs. Then,
 
 Example:
 
-{% highlight %}
+```
 Given n = 3. 
 
 At first, the three bulbs are [off, off, off].
@@ -22,7 +22,8 @@ After third round, the three bulbs are [on, off, off].
 
 So you should return 1, because there is only one bulb is on.
 
-{% endhighlight %}
+```
+
 
 ## Solution
 
