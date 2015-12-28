@@ -47,6 +47,11 @@ img {
     vertical-align: middle;
 }
 
+img[alt="minipic"] { 
+  max-width:  300px; 
+  display: block;
+}
+
 
 
 /**
