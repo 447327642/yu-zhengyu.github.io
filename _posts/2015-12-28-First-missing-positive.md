@@ -1,11 +1,10 @@
-
 ---
 layout: post
 title:  "41.First Missing Positive"
 date:   2015-12-28 17:35:22 -0500
 categories: code
 ---
-#[41.First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
+
 
 ##### Difficulty: Hard
 ## Porblem
