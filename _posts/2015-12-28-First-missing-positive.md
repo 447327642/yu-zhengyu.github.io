@@ -4,7 +4,7 @@ title:  "41.First Missing Positive"
 date:   2015-12-28 17:35:22 -0500
 categories: code
 ---
-##### Difficulty: Hard
+### Difficulty: Hard
 
 ## Porblem
 
