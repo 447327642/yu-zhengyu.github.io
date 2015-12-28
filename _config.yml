@@ -12,7 +12,7 @@ description: > # 把一些学习上的东西记录下来，方便自己记忆。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yu-zhengyu.github.io" # the base hostname & protocol for your site
 twitter_username: yuzheng
-github_username:  yu-zheng
+github_username:  yu-zhengyu
 
 # Build settings
 markdown: kramdown
