@@ -156,3 +156,33 @@ public static boolean isrotate (String s1, String s2) {
 }
 {% endhighlight %}
 
+### Reverse a sentenace. such as "code is good", after reverse, it would become "good is code".
+
+翻转一个句子，一个一个单词进行翻转。这题一开始我还是懵了。后来发现也挺简单。用给一个下标来进行遍历。如果遇到一个空格，就重头开始插入。否则就一直顺着原来的顺序进行插入。看了代码就明白了，还是比较巧妙。
+
+####code[java]
+
+{% highlight java %}
+public static void main(String[] args) {
+	String str = "much. very you love I";
+	System.out.println(reverse(str));
+
+}
+
+public static String reverse(String s) {
+	int pos = 0;
+	StringBuilder sb = new StringBuilder();
+	for (int i = 0; i < s.length(); i++) {
+		char c = s.charAt(i);
+		if (c == ' ') {
+			pos = 0;
+		}
+		sb.insert(pos, c);
+		if (c != ' ') {
+			pos++;
+		}
+	}
+	return sb.toString();
+}
+
+{% endhighlight %}
