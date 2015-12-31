@@ -4,12 +4,12 @@ title:  "总结(II) Graph and Tree Review --- 图和树的总结"
 date:   2015-12-30 22:35:22
 categories: code
 ---
-
+***
 ## 图
 图的话我现在也就基本掌握了***BFS*** 和 ***DFS***，在难的像什么有向图，流的搜索，拓扑排序，最小生成树什么的，大二考完试后除了记得大体思路外，具体编码已经忘记怎么做了。以后再慢慢进行补充好了。
 
 首先还是总结基本的算法。
-
+***
 ### DFS
 DFS其实就是把每次搜索的点加入到***栈***当中，一直搜索知道栈为空。这个方法有时候在树的问题也会用的到。下面是代码的基本思路。
 
@@ -57,12 +57,15 @@ public class Solution {
 
 {% endhighlight %}
 
+***
 ### BFS
 BFS思想和DFS类似，把每次搜索的点都放进***队列***当中，一直搜索知道队列为空为止。代码和例子和上述差不多，就是把stack改成Queue即可。具体的以后再补充。
 
+***
 ## 树
 树一定要掌握的还是***前序，中序，后续***， 递归和非递归的方法都应该掌握。
 
+***
 ### 前序
 
 访问顺序是: 访问，左子树，右子树
@@ -111,6 +114,7 @@ class Solution(object):
 
 {% endhighlight %}
 
+***
 ### 中序和后序
 基本上看了前序以后，中序和后序就差不多了。递归版本的话，就是读取和访问的顺序不同而已。上面已经在代码上标注了，下面再次把三种方式总结：
 
@@ -118,9 +122,11 @@ class Solution(object):
 * 中序访问顺序是: 左子树，访问，右子树
 * 后序访问顺序是: 左子树，右子树，访问
 
+***
 ### 树的构建
 比较基本的还有树的构建方面的题目，比如给出中序和后序访问的数组，构建一个树，或者给出前序和中序，构建一个树。
 
+***
 ####Construct Binary Tree from Inorder and Postorder Traversal
 ####code[java] 
 
@@ -153,7 +159,7 @@ public class Solution {
 }
 {% endhighlight %}
 
-
+***
 ####Construct Binary Tree from Preorder and Inorder Traversal
 ####code[java] 
 

@@ -7,7 +7,7 @@ categories: code
 
 这几篇我会归类总结一下做过的题目。总体会根据《Cracking the Code interview 189》这本书来进行复习。
 
-
+***
 ### Write a method anagram(s,t) to decide if two strings are anagrams or not.
 
 这题是google一道面试题。题目的意思很简单，就看一个String是不是另一个String重新排序后的结果。方法很多。比较好的做法是开一个int[256], 分别扫一遍String，把相应字符的ASCII码记录。然后相互对比。又或者扫第一个字符串的时候，每一个相应字符下的数量+1，扫第二个的时候就-1，然后看看所有数组是不是都是0，这样的时间复杂度是O(N), 空间的话是O(N). 还有比较SB的方法。把字符排序，然后直接对比，这样时间复杂度是O(nlogn).
@@ -39,6 +39,7 @@ public class Solution {
 };
 {% endhighlight %}
 
+***
 ### Check if the String is unique.
 
 这题也是比较高频的。其实可以直接用HashTable直接记下每一个字母出现的字数，如果有字母已经出现了，那么就返回false即可。当然，面试的时候follow up可能会要求你不要用extra data structure. 那么HashTable就不可以用了。 我们可以用一个int数组来解决一个问题。还是和上题一样，用一个256位的数组储存每一个字母出现的次数，如果发现改字母的数据已经不是0了，就可以返回false了。
@@ -77,6 +78,7 @@ public static boolean compareUnique(String a) {
 }
 {% endhighlight %}
 
+***
 ### check the if sentence is palinpermutation
 
 回文，比较经典的一道题目。考法太多。还有专门的算法来求一个长String中求出最长回文的，[Manacher算法：求解最长回文字符串，时间复杂度为O(N)](http://blog.csdn.net/yzl_rex/article/details/7908259)，等有空在回过头来看。
@@ -116,6 +118,7 @@ public class Solution {
 }
 {% endhighlight %}
 
+***
 ### stringcompress
 
 我是没想到有面试会出现这个。还是挺经典的。就是把相同的字母用数字和字母进行概括。比如说：aaabbbccc就替换成3a3b3c.所以直接上代码了。
@@ -141,6 +144,7 @@ public static String stringcompress(String s) {
 }
 {% endhighlight %}
 
+***
 ### check if the s2 is the rotate from s1
 
 这题就是技巧问题了。如果一个字符串是另一个字符串的rotation，那么其实将S2拼接上S1的尾部，然后查看S2是否是新字符串的字串即可。
@@ -156,6 +160,7 @@ public static boolean isrotate (String s1, String s2) {
 }
 {% endhighlight %}
 
+***
 ### Reverse a sentenace. such as "code is good", after reverse, it would become "good is code".
 
 翻转一个句子，一个一个单词进行翻转。这题一开始我还是懵了。后来发现也挺简单。用给一个下标来进行遍历。如果遇到一个空格，就重头开始插入。否则就一直顺着原来的顺序进行插入。看了代码就明白了，还是比较巧妙。
