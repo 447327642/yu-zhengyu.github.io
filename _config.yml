@@ -20,11 +20,11 @@ avatar: profile.png
 email: zhengyu.cmu@gmail.com
 github: yu-zhengyu # username
 twitter: yuzheng
-linkedin: yuzheng
-stackoverflow: username   #e.g: users/2735833/proton1h1
+linkedin: yuzhengcmu
+stackoverflow: #   #e.g: users/2735833/proton1h1
 #Comment out if you don't want disqus 
-disqus: username
-google_analytics: UA-69391421-1
+disqus: #
+google_analytics: #
 
 
 # needed for travis-ci build
