@@ -1,18 +1,31 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# top level stuff you probably don't need to touch
+highlighter: pygments
+markdown: rdiscount
+rdiscount:
+  extensions: [smart]
+permalink: /:title.html
+paginate: 5
+gems: [jekyll-paginate]
+port: 3000
+safe: true
 
-# Site settings
-title: 郑彧个人博客
+
+# edit here to achieve your personal greatness
+url: http://yu-zhengyu.github.io/
+baseurl: /yu-zhengyu/
+title: Yu Zheng
+author: Yu Zheng
+description: Personal blog and resume
+avatar: profile.png
 email: zhengyu.cmu@gmail.com
-description: > # 把一些学习上的东西记录下来，方便自己记忆。如果能够影响一两个人，也是功德一件。
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yu-zhengyu.github.io" # the base hostname & protocol for your site
-twitter_username: yuzheng
-github_username:  yu-zhengyu
+github: yu-zhengyu # username
+twitter: yuzheng
+linkedin: yuzheng
+stackoverflow: username   #e.g: users/2735833/proton1h1
+#Comment out if you don't want disqus 
+disqus: username
+google_analytics: UA-69391421-1
 
-# Build settings
-markdown: kramdown
+
+# needed for travis-ci build
+exclude: [vendor]
