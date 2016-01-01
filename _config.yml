@@ -12,7 +12,7 @@ safe: true
 
 # edit here to achieve your personal greatness
 url: http://yu-zhengyu.github.io/
-baseurl: /yu-zhengyu/
+baseurl: http://yu-zhengyu.github.io/
 title: Yu Zheng
 author: Yu Zheng
 description: Personal blog and resume
