@@ -1,11 +1,8 @@
 ---
 layout: post
-title: 总结(I) Array and String Review --- 数组类和String题目总结 &darr; &darr;
+title: 总结(I) Array and String Review --- 数组类和String题目总结
 tags:
-- News
-- Tags
-- Blog
-- Post
+- Algorithm Summary
 ---
 
 这几篇我会归类总结一下做过的题目。总体会根据《Cracking the Code interview 189》这本书来进行复习。

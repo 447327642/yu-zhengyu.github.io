@@ -1,11 +1,8 @@
 ---
 layout: post
-title: 62.Unique Paths &darr; &darr;
+title: 62.Unique Paths
 tags:
-- News
-- Tags
-- Blog
-- Post
+- leetcode
 ---
 
 ### Difficulty: Medium

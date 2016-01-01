@@ -1,11 +1,8 @@
 ---
 layout: post
-title: 总结(II) Graph and Tree Review --- 图和树的总结 &darr; &darr;
+title: 总结(II) Graph and Tree Review --- 图和树的总结
 tags:
-- News
-- Tags
-- Blog
-- Post
+- Algorithm Summary
 ---
 ***
 ## 图

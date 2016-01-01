@@ -1,11 +1,8 @@
 ---
 layout: post
-title:  313.Super Ugly Number &darr; &darr;
+title:  313.Super Ugly Number
 tags:
-- News
-- Tags
-- Blog
-- Post
+- leetcode
 ---
 ### Difficulty: Medium
 

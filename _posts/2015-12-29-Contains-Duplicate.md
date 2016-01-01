@@ -1,11 +1,8 @@
 ---
 layout: post
-title: 217. Contains Duplicate &darr; &darr;
+title: 217. Contains Duplicate
 tags:
-- News
-- Tags
-- Blog
-- Post
+- leetcode
 ---
 ### Difficulty: Easy
 

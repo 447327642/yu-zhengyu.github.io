@@ -1,11 +1,8 @@
 ---
 layout: post
-title:  41.First Missing Positive &darr; &darr;
+title:  41.First Missing Positive
 tags:
-- News
-- Tags
-- Blog
-- Post
+- leetcode
 ---
 ### Difficulty: Hard
 

@@ -2,10 +2,7 @@
 layout: post
 title: 319.Bulb Switcher
 tags:
-- News
-- Tags
-- Blog
-- Post
+- leetcode
 ---
 ### Difficulty: Medium
 
