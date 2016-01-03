@@ -10,6 +10,23 @@ tags:
 ***
 ### 78. Subsets： Given a set of distinct integers, nums, return all possible subsets.
 
+For example：
+
+If nums = [1,2,3], a solution is:
+
+{% highlight java %}
+[
+  [3],
+  [1],
+  [2],
+  [1,2,3],
+  [1,3],
+  [2,3],
+  [1,2],
+  []
+]
+{% endhighlight %}
+
 这题是典型的用回溯法的题目，我当时用的是python做的。因为这题是求子集，所以注意一下空集也算进去。下面直接上代码。
 
 ####code[python]
