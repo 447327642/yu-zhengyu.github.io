@@ -164,8 +164,11 @@ public:
 
 {% endhighlight %}
 
+***
 
 ####code[java] -- O(n^3)的版本
+
+这个还是用我们之前的理论来做。效果还行。
 
 {% highlight java %}
 
