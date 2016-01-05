@@ -7,6 +7,7 @@ tags:
 
 这几篇我会归类总结一下做过的题目。总体会根据《Cracking the Code interview 189》这本书来进行复习。
 
+## String
 ***
 ### Write a method anagram(s,t) to decide if two strings are anagrams or not.
 
@@ -192,4 +193,28 @@ public static String reverse(String s) {
 
 {% endhighlight %}
 
+***
+
+***
+
+## Array
+
+### basci skill
+
+Reverse a array in java.
+比较会常用的一种，记一下。当然也可以用库函数：***Collections.reverse(Arrays.asList(nums));***
+
+{% highlight java %}
+
+public void reverse(int[] nums, int left, int right){
+    while(left<right){
+        int temp = nums[left];
+        nums[left]=nums[right];
+        nums[right]=temp;
+        left++;
+        right--;
+    }
+}
+
+{% endhighlight %}
 
