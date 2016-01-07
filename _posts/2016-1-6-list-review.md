@@ -59,6 +59,46 @@ public static ListNode getMiddleOfList(ListNode l) {
 
 ***
 
+### 3. reverse a list from m to n
+
+这题我做的真的不好，后来还是看答案来写了。一开始的思路不太好。总认为是要先把 m 到 n 的链表先翻转了，然后再将这个翻转后的链表连回原来的头和尾。这样导致了我总是没办法满足一些边界条件。
+
+其实这题不需要我想的那么麻烦，其实就记得一个头，然后每次遍历以后把当前的node插入到头的下一个就好了。这样的话还不容易出错。还有就是dummy的技巧用的不是很熟，以后打算每天都写一遍这个题，加强手部反应。
+
+####code[java]
+{% highlight java %}
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public ListNode reverseBetween(ListNode head, int m, int n) {
+        if(head == null)
+            return null;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode pre = dummy;
+        for(int i = 0; i < m - 1; i++)
+            pre = pre.next;
+        ListNode current = pre.next;
+        ListNode nextn = current.next;
+        
+        for(int i = 0; i < n - m; i++) {
+            current.next = nextn.next;
+            nextn.next = pre.next;
+            pre.next = nextn;
+            nextn = current.next;
+        }
+        
+        return dummy.next;
+        
+    }
+}
+{% endhighlight %}
 
 
 
