@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 总结(IV) N sum question review --- N sum 题目总结
+title: N sum question review --- N sum 题目总结
 tags:
 - Algorithm Summary
 ---
