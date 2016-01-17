@@ -7,6 +7,16 @@ tags:
 
 自己本来是个python的程序员，然而来了CMU后都被带成java程序员了，没办法了，现在面试也以Java为主，不过其实各个语言也是相通的。那么接下来我就收集一些JAVA面试时候会问的奇奇怪怪的问题吧。
 
+##[基础知识篇]
+
+1. 什么是JVM
+***
+JVM 就是java虚拟机。JVM 会把Java code编译为byte code， 然后执行这些byte code。所有系统都能够安装JAVA虚拟机，这也体现了Java程序的多平台执行优势。
+***
+
+
+##[code 篇]
+
 ### 用最少的code写一个函数，要求会把栈用光。
 当时第一次遇到这种问题，我本身吓了一跳。不过其实这题是考你基础知识，就是栈和堆的问题。一般来收，所有的对象都是存放到堆中的，而指向对象的reference是存在栈里面的，函数调用，一开始也会放进栈。那么，用光栈最快的方法就是进行递归调用。下面上代码
 
@@ -33,16 +43,16 @@ public class Useupstack {
 ####code[C++]
 {% highlight c++ %}
 
-include <stdlib.h>
-include <unistd.h>
+#include <stdlib.h>
+#include <unistd.h>
 
-int main(int argc, char** argv)
+void main(int argc, char** argv)
 {
     while(1)
     {
-        malloc(1024 * 4);
-        fork();
+        malloc(1);
     }
 }
 
 {% endhighlight %}
+
