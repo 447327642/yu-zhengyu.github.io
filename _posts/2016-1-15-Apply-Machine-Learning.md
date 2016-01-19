@@ -15,7 +15,7 @@ tags:
 
 下面的图把基本的界面给大致介绍了一遍。
 
-<img src="http://yu-zhengyu.github.io/static/img/ML/ML-1.png">
+<img src="http://yu-zhengyu.github.io/static/img/ML/ML-1.png" width="500">
 
 
 ### Lecutre 1
