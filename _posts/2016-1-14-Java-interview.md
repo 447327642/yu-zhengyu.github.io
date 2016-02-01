@@ -134,7 +134,107 @@ public class simple {
 
 在 java1.8中，一般是将key 的高16位异或上低16位获得的。
 
-##### 13. 
+##### 13. 为什么要创建私有的构造函数
+
+私有构造函数和一般的私有函数没有区别，也是只能够类内部进行调用，外部无法进行访问。创建私有构造函数的原因可能有两个：一，是你不想让除类之外的其他类构造这个类。二是你只希望该对象在类的内部构造。
+
+另外，私有构造函数一般用在singleton design pattern中。这也是开发人员使用私有构造函数的又一个原因。
+
+###### 关于 singleton design
+
+设计 singleton 的关键就是不能让其他类随便构造该类对象。那么，我们唯一能做的就是控制该类的构造函数。将构造函数变为私有是一个关键的步骤。 下面是一个 singleton 设计的例子。
+
+####code[java]
+{% highlight java %}
+// 以 singleton 的模式实现该类
+public class Logging {
+	// 创建一个实例，有且只有一个
+	private static final Logging singletonInstance = new Logging();
+
+	// 私有构造函数
+	private Logging() {}
+
+	// 返回实例，保证了有且只有一个实例
+	public static Logging getSingleton() {
+		return singletonInstance;
+	}
+}
+
+{% endhighlight %}
+
+###### 假设我们希望上面的 singleton 实例只有在被需要的时候再创建从而节省一些资源，我们应该怎么做。
+
+这题还是承接上面的题目来说的。其实只要对 getSingleton 函数稍微修改一下即可
+
+####code[java]
+{% highlight java %}
+
+private static Logging singletonInstance = null;
+public static Logging getSingleton() {
+	if(singletonInstance == null)
+		singletonInstance = new Loging();
+	reutrn singletonInstance;
+}
+
+{% endhighlight %}
+
+###### 在设计 singleton 的时候，如何保证线程安全？？
+这个题也是承接上面的两个问题的。首先明白，为什么要保证线程安全。首先，上面的例子, 我们这样看视乎并没有什么问题。这是因为都是基于单线程来看的。假设我们现在有多个线程，并且这些线程同时调用上面的 getsingleton 函数来对实例进行初始化，因为同一时间满足了条件，结果我们也创建了两个或以上的实例。那么怎么解决这个问题。其实，java 也已经替我们想好了，只要在函数前面加上 synchronized 的关键字就可以了。
+
+####code[java]
+{% highlight java %}
+
+private static Logging singletonInstance = null;
+public synchronized static Logging getSingleton() {
+	if(singletonInstance == null)
+		singletonInstance = new Loging();
+	reutrn singletonInstance;
+}
+
+{% endhighlight %}
+
+synchronized 会保证该函数只有一个线程能够进行访问，从而避免了上述冲突情况的出现。
+
+
+##### 14. finally 中的代码会在 return 之后执行么？
+这个题目也是有趣。一般来说，一个函数如果调用了 return，基本上说明该函数已经停止了，在这之后的代码也不会执行，编译器其实也会提示错误，然而下面的例子能够说明一些问题：
+
+####code[java]
+{% highlight java %}
+
+class SomeClass
+{
+    public static void main(String args[]) 
+    { 
+        // call the proveIt method and print the return value
+    	System.out.println(SomeClass.proveIt()); 
+    }
+
+    public static int proveIt()
+    {
+    	try {  
+            	return 1;  
+    	}  
+    	finally {  
+    	    System.out.println("finally block is run 
+            before method returns.");
+    	}
+    }
+}
+
+{% endhighlight %} 
+
+最后，该段代码的输出为
+
+{% highlight java %}
+finally block is run before method returns.
+1
+{% endhighlight %} 
+
+我们发现了，return 后的代码不但执行了，还是在 return 之前。
+
+‘’‘当然有例外，假如是调用 System.exit(), 那么final 块的代码就不会调用’‘’
+
 
 ##[code 篇]
 
