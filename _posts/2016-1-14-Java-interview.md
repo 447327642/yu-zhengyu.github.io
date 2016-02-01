@@ -120,6 +120,21 @@ public class simple {
 
 {% endhighlight %}
 
+***
+
+##### 10. java HashMap, 有什么特点
+
+是基于Map接口的实现，存储键值对时，它可以接收null的键值，是非同步的，HashMap存储着Entry(hash, key, value, next)对象。
+
+##### 11. HashMap 的 get 和 put 函数是如何工作的
+
+当我们使用 put 函数的时候，我们会把 Key 和 value 传入，hashmap 会使用 hashcood 函数计算出 key 的哈希值，通过计算出的哈希值找到对应的 bucket，如果当前的 bucket 已经满了，HashMap会根据情况对容量进行扩容，一般是当前 capacity 的两倍。使用 get 函数的时候，传入 key 的值，计算出对应的哈希值，找到相应的 bucket，然后在 bucket 中使用 equals 函数找到相应的key。如果出现碰撞的情况，一般会使用链表来解决冲突。
+
+##### 12. Hashcode 函数一般是怎么计算的
+
+在 java1.8中，一般是将key 的高16位异或上低16位获得的。
+
+##### 13. 
 
 ##[code 篇]
 
