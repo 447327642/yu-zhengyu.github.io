@@ -74,8 +74,6 @@ public class Solution {
  * @date 2016年1月24日
  */
 public class Solution {
-
-
     /**
      * @param args
      */
