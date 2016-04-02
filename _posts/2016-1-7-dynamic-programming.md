@@ -1,8 +1,11 @@
 ---
-layout: post
 title: 总结(VI) dynamic-programming review --- 动态规划题目总结
+date: 2016-01-07 09:22:30
 tags:
-- Algorithm Summary
+- leetcode
+- 刷题
+categories:
+- 总结
 ---
 
 动态规划的题目，一般可以在网上搜索***《背包九讲》***这个帖子，讲的还是挺好的，由浅入深。下面就把自己觉得遇到的比较典型的题目记录下来。
@@ -26,7 +29,7 @@ return -1.
 
 基本就是bottom-up的解法。先凑1元，得出凑出1元最少需要多少个，然后求2元......以此类推，到求出amount。
 
-{% highlight java %}
+```
 
 public class Solution {
     public int coinChange(int[] coins, int amount) {
@@ -53,14 +56,14 @@ public class Solution {
     }
 }
 
-{% endhighlight %}
+```
 
 
 ####code[java] 递归
 
 和非递归差不多，不过是由up到bottom。假设当前我们已经能得到当前的钱数，那么，遍历一遍coin，看前一个能凑成当前钱数最小的，那么当前的最小组合数就是lastsum+1。
 
-{% highlight java %}
+```
 
 public class Solution {
 	public int coinChange(int[] coins, int amount) {
@@ -95,6 +98,6 @@ public class Solution {
 
 
 
-{% endhighlight %}
+```
 
 ***
